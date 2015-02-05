@@ -1,0 +1,86 @@
+[alias]
+# common
+co = checkout
+br = branch
+st = status
+ci = commit
+unstage = reset HEAD --
+
+# LOG
+# simple one line log
+ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
+# changed files
+ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --decorate --numstat
+# no colors
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+# commits with dates
+ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
+# commits with short dates
+lds = "!git ldt --date=short"
+# commits with relative dates
+ldr = "!git ldt --date=relative"
+# commits with date and times
+ldi = "!git ldt --date=iso"
+# graph representation
+lgraph = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset'
+# default look for short git log
+ldef = log --oneline --decorate
+# commits related to a file
+filelog = log -u
+fl = log -u
+# last commit
+lc = "!git ll -1"
+
+# DIFF
+# Show a diff last commit:
+dlc = diff --cached HEAD^
+diffc = diff --cached HEAD
+
+# ALIAS
+# List all your aliases
+la = "!git config -l | grep alias | cut -c 7-"
+
+# FIX
+# something like hg rollback
+rollback = "reset --soft HEAD^"
+# remove already committed trash
+fuck = "reset --hard HEAD"
+
+# REPOSITORY ROOT
+root = "!pwd"
+
+# TAGS
+# show the last tag
+lasttag = describe --tags --abbrev=0
+lt = describe --tags --abbrev=0
+
+# [ unreviewed ]
+# Text and aliases were originally copied from :
+# http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+# Many thanks to author
+
+# Show content (full diff) of a commit given a revision:
+dr  = "!f() { git diff "$1"^.."$1"; }; f"
+lc1  = "!f() { git ll "$1"^.."$1"; }; f"
+diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+# SEARCH
+# Find a file path in codebase:
+f = "!git ls-files | grep -i"
+
+# Search/grep your entire codebase for a string:
+grep = grep -Ii
+gr = grep -Ii
+
+# Grep from root folder:
+gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+# BRANCH
+# Rename [branch] to done-[branch]
+# In some of my workflows I wanted to quickly rename branches prepending done- to their names. Here is the alias that came out of that workflow:
+done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+
+# MERGE
+# Being the Branch/Integration manager at my current client, I use these constantly to merge stuff:
+ours = "!f() { git co --ours $@ && git add $@; }; f"
+theirs = "!f() { git co --theirs $@ && git add $@; }; f"
