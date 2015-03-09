@@ -2,7 +2,7 @@
 # common
 co = checkout
 br = branch
-st = status
+st = status -sb
 ci = commit
 unstage = reset HEAD --
 
