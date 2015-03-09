@@ -3,7 +3,9 @@
 co = checkout
 br = branch
 st = status -sb
-ci = commit
+ci = commit -a
+cm = commit -a -m
+com = commit -m
 unstage = reset HEAD --
 
 # LOG
