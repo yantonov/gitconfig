@@ -6,6 +6,7 @@ st = status -sb
 ci = commit -a
 cm = commit -a -m
 com = commit -m
+cat = cat-file -p
 unstage = reset HEAD --
 
 # LOG
