@@ -90,4 +90,4 @@ theirs = "!f() { git co --theirs $@ && git add $@; }; f"
 
 # pull
 prom = pull --rebase origin master
-
+pom = push origin master
