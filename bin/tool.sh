@@ -14,7 +14,9 @@ TARGET_DIR="$HOME"
 
 function use {
     # backup
-    cp $TARGET_DIR/$FILENAME $TARGET_DIR/$FILENAME.bak_$TIME
+    if [ -f "$TARGET_DIR/$FILENAME" ]; then
+        cp  $TARGET_DIR/$FILENAME $TARGET_DIR/$FILENAME.bak_$TIME
+    fi
     # use settings from git repo
     cp $GIT_REPO_DIR/$FILENAME $TARGET_DIR/$FILENAME
 }
@@ -40,7 +42,8 @@ case $CMD in
         ;;
     *)
         echo "Usage:"
-        echo -e "\t$0 use - backup current settings and use keybinding from git repo"
-        echo -e "\t$0 save - copy current keybinding settings to git repo"
+        echo -e "\t$0 use - backup current settings and use settings from git repo"
+        echo -e "\t$0 save - copy current settings to git repo"
+        echo -e "\t$0 remove_backup - remove backup files"
         ;;
 esac
