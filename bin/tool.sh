@@ -8,25 +8,35 @@ GIT_REPO_DIR="$SCRIPT_DIR/.."
 
 TIME=`date "+%Y-%m-%d_%H-%M-%S"`
 
-FILENAME=".gitaliases"
+FILENAMES=(".gitaliases" ".gitconfig")
 
 TARGET_DIR="$HOME"
 
 function use {
     # backup
-    if [ -f "$TARGET_DIR/$FILENAME" ]; then
-        cp  $TARGET_DIR/$FILENAME $TARGET_DIR/$FILENAME.bak_$TIME
-    fi
-    # use settings from git repo
-    cp $GIT_REPO_DIR/$FILENAME $TARGET_DIR/$FILENAME
+    for FILENAME in "${FILENAMES[@]}"
+    do
+        if [ -f "$TARGET_DIR/$FILENAME" ]; then
+            cp  $TARGET_DIR/$FILENAME $TARGET_DIR/$FILENAME.bak_$TIME
+        fi
+        # use settings from git repo
+        cp $GIT_REPO_DIR/$FILENAME $TARGET_DIR/$FILENAME
+    done
+
 }
 
 function save {
-    cp $TARGET_DIR/$FILENAME $GIT_REPO_DIR/$FILENAME
+    for FILENAME in "${FILENAMES[@]}"
+    do
+        cp $TARGET_DIR/$FILENAME $GIT_REPO_DIR/$FILENAME
+    done
 }
 
 function remove_backup {
-    rm -i $TARGET_DIR/$FILENAME.bak*
+    for FILENAME in "${FILENAMES[@]}"
+    do
+        rm -i $TARGET_DIR/$FILENAME.bak*
+    done
 }
 
 CMD=$1
