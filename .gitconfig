@@ -3,7 +3,7 @@
     email = yantonov@yandex.ru
 
 [core]
-    excludesfile = $HOME/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = emacs
 
 [difftool "sourcetree"]
@@ -21,12 +21,12 @@
         cmd = $HOME/emacs/diff/ediff.sh $LOCAL $REMOTE $MERGED $BASE
         trustExitCode = true
 
-[include]
-    path=$HOME/.gitaliases
-
 [diff]
         tool = ediff
         guitool = ediff
 
 [merge]
         tool = ediff
+
+[include]
+    path=~/.gitaliases
