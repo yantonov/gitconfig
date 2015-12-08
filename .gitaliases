@@ -37,7 +37,6 @@ lc = "!git ll -1"
 # DIFF
 # Show a diff last commit:
 dlc = diff --cached HEAD^
-dch = diff --cached HEAD
 diffc = diff --cached HEAD
 
 # ALIAS
