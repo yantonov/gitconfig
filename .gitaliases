@@ -93,5 +93,5 @@ plrom = pull --rebase origin master
 psom = push origin master
 
 # mistakes
-revert = checkout --
+hgrevert = checkout --
 
