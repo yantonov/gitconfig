@@ -91,3 +91,7 @@ theirs = "!f() { git co --theirs $@ && git add $@; }; f"
 # pull/push
 plrom = pull --rebase origin master
 psom = push origin master
+
+# mistakes
+revert = checkout --
+
