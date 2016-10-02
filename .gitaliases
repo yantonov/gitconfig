@@ -52,12 +52,18 @@ fuck = "reset --hard HEAD^"
 # REPOSITORY ROOT
 root = "!pwd"
 
+# commit and forgot to add file
+commend = 'commit --amend --no-edit'
+
+# force
+please = 'push --force-with-lease'
+
 # TAGS
 # show the last tag
 lasttag = describe --tags --abbrev=0
 lt = describe --tags --abbrev=0
 
-# [ unreviewed ]
+# [ REVIEW NEEDED ]
 # Text and aliases were originally copied from :
 # http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 # Many thanks to author
@@ -87,13 +93,3 @@ done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} gi
 # Being the Branch/Integration manager at my current client, I use these constantly to merge stuff:
 ours = "!f() { git co --ours $@ && git add $@; }; f"
 theirs = "!f() { git co --theirs $@ && git add $@; }; f"
-
-# pull/push
-plrom = pull --rebase origin master
-psom = push origin master
-
-# mistakes
-hgrevert = checkout --
-
-# force
-please 'push --force-with-lease'
