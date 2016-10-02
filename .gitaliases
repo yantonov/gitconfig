@@ -95,3 +95,5 @@ psom = push origin master
 # mistakes
 hgrevert = checkout --
 
+# force
+please 'push --force-with-lease'
