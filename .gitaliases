@@ -15,6 +15,9 @@ unstage = reset HEAD --
 # stash
 staash = 'stash --include-untracked'
 
+# merge
+merc = 'merge --no-ff'
+
 # LOG
 # simple one line log
 ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
