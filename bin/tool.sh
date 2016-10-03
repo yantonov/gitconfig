@@ -8,7 +8,7 @@ GIT_REPO_DIR="$SCRIPT_DIR/.."
 
 TIME=`date "+%Y-%m-%d_%H-%M-%S"`
 
-FILENAMES=(".gitaliases" ".gitconfig")
+FILENAMES=(".gitaliases")
 
 TARGET_DIR="$HOME"
 

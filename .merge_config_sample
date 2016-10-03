@@ -1,11 +1,3 @@
-[user]
-    name = Yury Antonov
-    email = yantonov@yandex.ru
-
-[core]
-    excludesfile = ~/.gitignore_global
-    editor = emacs
-
 [difftool "sourcetree"]
     cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
     path =
@@ -27,6 +19,3 @@
 
 [merge]
         tool = ediff
-
-[include]
-    path=~/.gitaliases
