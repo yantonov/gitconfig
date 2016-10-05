@@ -48,9 +48,9 @@ lc = "!git ll -1"
 dlc = diff --cached HEAD^
 diffc = diff --cached HEAD
 # Show content (full diff) of a commit given a revision:
-dr  = "!f() { git diff "$1"^.."$1"; }; f"
-diffr  = "!f() { git diff "$1"^.."$1"; }; f"
-lc1  = "!f() { git ll "$1"^.."$1"; }; f"
+dr    = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
+diffr = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
+lc1   = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git ll "$1"^.."$1"; fi }; f"
 
 # GREP/SEARCH
 # Search/grep your entire codebase for a string:
