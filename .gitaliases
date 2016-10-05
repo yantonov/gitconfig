@@ -50,7 +50,6 @@ diffc = diff --cached HEAD
 # Show content (full diff) of a commit given a revision:
 dr    = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
 diffr = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
-lc1   = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git ll "$1"^.."$1"; fi }; f"
 
 # GREP/SEARCH
 # Search/grep your entire codebase for a string:
@@ -82,7 +81,7 @@ please = 'push --force-with-lease'
 # TAGS
 # show the last tag
 lasttag = describe --tags --abbrev=0
-lt = describe --tags --abbrev=0
+lt      = describe --tags --abbrev=0
 
 # MERGE
 # Being the Branch/Integration manager at my current client, I use these constantly to merge stuff:
