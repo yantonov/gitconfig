@@ -15,10 +15,10 @@ pl = pull
 unstage = reset HEAD --
 
 # stash
-staash = 'stash --include-untracked'
+staash = "stash --include-untracked"
 
 # merge
-merc = 'merge --no-ff'
+merc = "merge --no-ff"
 
 # LOG
 # simple one line log
@@ -75,7 +75,7 @@ fuck = "reset --hard HEAD^"
 root = "!pwd"
 
 # commit and forgot to add file
-commend = 'commit --amend --no-edit'
+commend = "commit --amend --no-edit"
 
 # force
 please = "push --force-with-lease"
