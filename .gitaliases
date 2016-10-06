@@ -76,7 +76,7 @@ root = "!pwd"
 commend = 'commit --amend --no-edit'
 
 # force
-please = 'push --force-with-lease'
+please = "push --force-with-lease"
 
 # TAGS
 # show the last tag
