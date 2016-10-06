@@ -10,6 +10,8 @@ ci = commit -a
 cm = commit -a -m
 com = commit -m
 cat = cat-file -p
+ps = push
+pl = pull
 unstage = reset HEAD --
 
 # stash
