@@ -17,6 +17,9 @@ unstage = reset HEAD --
 # stash
 staash = "stash --include-untracked"
 
+# current branch
+cb = "rev-parse --abbrev-ref HEAD"
+
 # merge
 merc = "merge --no-ff"
 
