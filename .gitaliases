@@ -80,11 +80,11 @@ rollback = "reset --soft HEAD~"
 fuck = "reset --hard HEAD^"
 
 # reset working directory
-revert = "reset --hard"
+clearwd = "reset --hard"
 
 # cleanup untracked files
 purge = "clean -d"
-show-purge "clean -d -n"
+show-purge = "clean -d -n"
 
 # REPOSITORY ROOT
 root = "!pwd"
