@@ -83,7 +83,7 @@ fuck = "reset --hard HEAD^"
 clearwd = "reset --hard"
 
 # cleanup untracked files
-purge = "clean -d"
+purge = "clean -d -i"
 show-purge = "clean -d -n"
 
 # REPOSITORY ROOT
