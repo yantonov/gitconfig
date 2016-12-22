@@ -24,6 +24,7 @@ cb = "rev-parse --abbrev-ref HEAD"
 
 # kill deleted remote branches
 purge-branch = "fetch --prune"
+clean-branches = "remote prune"
 
 # merge
 merc = "merge --no-ff"
