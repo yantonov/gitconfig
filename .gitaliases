@@ -8,9 +8,6 @@ br = branch -vv
 st = status -sb
 c = commit
 cm = commit -m
-ca = commit -a
-cam = commit -a -m
-com = commit -m
 cat = cat-file -p
 ps = push
 pl = pull
@@ -90,9 +87,6 @@ show-purge = "clean -d -n"
 # REPOSITORY ROOT
 root = "!pwd"
 
-# commit and forgot to add file
-commend = "commit --amend --no-edit"
-
 # force
 please = "push --force-with-lease"
 
@@ -100,8 +94,3 @@ please = "push --force-with-lease"
 # show the last tag
 lasttag = describe --tags --abbrev=0
 lt      = describe --tags --abbrev=0
-
-# MERGE
-# Being the Branch/Integration manager at my current client, I use these constantly to merge stuff:
-ours = "!f() { git co --ours $@ && git add $@; }; f"
-theirs = "!f() { git co --theirs $@ && git add $@; }; f"
