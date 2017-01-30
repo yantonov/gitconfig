@@ -78,7 +78,7 @@ rollback = "reset --soft HEAD~"
 fuck = "reset --hard HEAD^"
 
 # reset working directory
-clearwd = "reset --hard"
+clear = "reset --hard"
 
 # cleanup untracked files
 purge = "clean -d -i"
