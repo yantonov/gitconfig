@@ -11,6 +11,7 @@ cm = commit -m
 cat = cat-file -p
 ps = push
 pl = pull
+pr = pull --rebase
 unstage = reset HEAD --
 
 # stash
