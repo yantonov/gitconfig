@@ -20,6 +20,9 @@ staash = "stash --include-untracked"
 # current branch
 cb = "rev-parse --abbrev-ref HEAD"
 
+# current commit hash
+chash = "rev-parse HEAD"
+
 # kill deleted remote branches
 purge-branch = "fetch --prune"
 clean-branches = "remote prune"
