@@ -61,6 +61,9 @@ lc = "!git ll -1"
 # Show a diff last commit:
 dlc = diff --cached HEAD^
 diffc = diff --cached HEAD
+dc = diff --cached HEAD
+df = "!git diff --color HEAD | diff-so-fancy"
+dcf = "!diff --color --cached HEAD | diff-so-fancy"
 # Show content (full diff) of a commit given a revision:
 dr    = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
 diffr = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
