@@ -48,7 +48,7 @@ ldr = "!git ldt --date=relative"
 # commits with date and times
 ldi = "!git ldt --date=iso"
 # graph representation
-lgraph = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset'
+lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset'
 # default look for short git log
 ldef = log --oneline --decorate
 # commits related to a file
