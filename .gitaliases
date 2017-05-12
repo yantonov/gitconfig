@@ -15,6 +15,7 @@ pr = pull --rebase
 unstage = reset HEAD --
 rc = rebase --continue
 ra = rebase --abort
+rs = rebase --skip
 
 # stash
 staash = "stash --include-untracked"
