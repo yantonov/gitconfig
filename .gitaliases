@@ -1,4 +1,7 @@
 [alias]
+# list of aliases
+aliases = "config --get-regexp alias"
+
 # common
 # first commit can not be moved so you need to create empty commit as initial
 it = "!git init && git commit -m 'root' --allow-empty"
