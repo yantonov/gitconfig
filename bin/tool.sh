@@ -3,8 +3,9 @@
 # 1. backup current settings settings
 # 2. use settings from git repo
 
-SCRIPT_DIR=$(cd `dirname $0` && pwd)
-GIT_REPO_DIR="$SCRIPT_DIR/.."
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+GIT_REPO_DIR="${SCRIPT_DIR}/.."
 
 TIME=`date "+%Y-%m-%d_%H-%M-%S"`
 
