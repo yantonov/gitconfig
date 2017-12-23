@@ -4,24 +4,23 @@
 # 2. use settings from git repo
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
 GIT_REPO_DIR="${SCRIPT_DIR}/.."
 
-TIME=`date "+%Y-%m-%d_%H-%M-%S"`
+TIME=$(date "+%Y-%m-%d_%H-%M-%S")
 
 FILENAMES=(".gitaliases")
 
-TARGET_DIR="$HOME"
+TARGET_DIR="${HOME}"
 
 function use {
     # backup
     for FILENAME in "${FILENAMES[@]}"
     do
-        if [ -f "$TARGET_DIR/$FILENAME" ]; then
-            cp  $TARGET_DIR/$FILENAME $TARGET_DIR/$FILENAME.bak_$TIME
+        if [ -f "${TARGET_DIR}/${FILENAME}" ]; then
+            cp  "${TARGET_DIR}/${FILENAME}" "${TARGET_DIR}/${FILENAME}.bak_${TIME}"
         fi
         # use settings from git repo
-        cp $GIT_REPO_DIR/$FILENAME $TARGET_DIR/$FILENAME
+        cp "${GIT_REPO_DIR}/${FILENAME}" "${TARGET_DIR}/${FILENAME}"
     done
 
 }
@@ -29,19 +28,19 @@ function use {
 function save {
     for FILENAME in "${FILENAMES[@]}"
     do
-        cp $TARGET_DIR/$FILENAME $GIT_REPO_DIR/$FILENAME
+        cp "${TARGET_DIR}/${FILENAME}" "${GIT_REPO_DIR}/${FILENAME}"
     done
 }
 
 function remove_backup {
     for FILENAME in "${FILENAMES[@]}"
     do
-        rm -i $TARGET_DIR/$FILENAME.bak*
+        rm -i "${TARGET_DIR}/${FILENAME}.bak"*
     done
 }
 
 CMD=$1
-case $CMD in
+case "${CMD}" in
     use)
         use
         ;;
