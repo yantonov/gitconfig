@@ -40,9 +40,6 @@ chash = "rev-parse HEAD"
 purge-branch = "fetch --prune"
 clean-branches = "remote prune"
 
-# merge
-merc = "merge --no-ff"
-
 # LOG
 # simple one line log
 ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
@@ -86,10 +83,6 @@ gr = grep -Ii
 gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name --color -In $1 && cd $A; }; f"
 # Find a file path in codebase:
 f = "!git ls-files | grep -i"
-
-# ALIAS
-# List all your aliases
-la = "!git config -l | grep alias | cut -c 7-"
 
 # FIX
 # something like hg rollback
