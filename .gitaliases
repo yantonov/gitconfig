@@ -26,6 +26,7 @@ rc = rebase --continue
 ra = rebase --abort
 rs = rebase --skip
 mc = merge --no-ff
+cp = cherry-pick
 
 # stash
 staash = "stash --include-untracked"
