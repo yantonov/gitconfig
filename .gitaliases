@@ -3,8 +3,13 @@
 aliases = "config --get-regexp alias"
 
 # init git repository
+
 # first commit can not be moved so you need to create empty commit as initial
 it = "!git init && git commit -m 'root' --allow-empty"
+
+# global user settings may diffes from settings for newly created repository, so ask basic settings explicitly
+itc = "!git init && echo "Enter user name:" && read username && git config user.name "$username" && echo "Enter email:" && read email && git config user.email "$email" && git commit -m 'root' --allow-empty"
+
 # init nested git repository
 git = "!f() { cd "$GIT_PREFIX" && git init && git commit -m 'root' --allow-empty; }; f"
 
