@@ -10,4 +10,4 @@ to use .gitaliases create 'include' section in git config file and add file like
 
 and put .gitalises file to ${HOME} directory (or create symlink to it).
 
-p.s. Symlink creation for configuration files can be simplicied by [dot](https://github.com/yantonov/dot) tool.
+p.s. Symlink creation for configuration files can be simplified by using [dot](https://github.com/yantonov/dot) tool.
