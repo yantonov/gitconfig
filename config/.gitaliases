@@ -73,9 +73,6 @@ lc = "!git ll -1"
 
 # DIFF
 # Show a diff last commit:
-dlc = diff --cached HEAD^
-diffc = diff --cached HEAD
-dc = diff --cached HEAD
 df = "!git diff --color HEAD | diff-so-fancy"
 dfc = "!git diff --color --cached HEAD | diff-so-fancy"
 # Show content (full diff) of a commit given a revision:
