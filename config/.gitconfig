@@ -1,0 +1,17 @@
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = emacs
+    pager = delta
+
+[delta]
+    line-numbers = true
+    side-by-side = true
+    line-numbers-left-format = ""
+    line-numbers-right-format = "| "
+
+[interactive]
+    diffFilter = delta --color-only
+
+[include]
+    path=~/.gituser
+    path=~/.gitaliases
