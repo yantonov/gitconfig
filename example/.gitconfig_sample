@@ -1,5 +1,0 @@
-[include]
-    path=~/.gituser
-    path=~/.gitaliases
-    path=~/.gitmerge
-
