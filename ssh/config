@@ -1,0 +1,9 @@
+AddKeysToAgent yes
+
+Host example1.com
+    IdentityFile ~/.ssh/id_example1
+
+Host example2.com
+    IdentityFile ~/.ssh/id_example2
+
+
