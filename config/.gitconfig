@@ -2,7 +2,7 @@
     excludesfile = ~/.gitignore_global
     editor = emacs
     pager = delta
-	autocrlf = input
+    autocrlf = input
 
 [delta]
     line-numbers = true
