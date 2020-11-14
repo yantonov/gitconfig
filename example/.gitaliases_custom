@@ -1,0 +1,3 @@
+[alias]
+setwork="!f() { git config user.name 'Work name'; git config user.email 'login@company.com'; }; f"
+sethome="!f() { git config user.name 'Personal name'; git config user.email 'mail@home.com'; }; f"
