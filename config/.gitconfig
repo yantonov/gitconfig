@@ -13,3 +13,4 @@
 [include]
     path=~/.gituser
     path=~/.gitaliases
+    path=~/.gitaliases_custom
