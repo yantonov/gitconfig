@@ -22,6 +22,7 @@ br = branch -vv
 st = status --long
 c = commit
 cm = commit -m
+ca = commit --amend
 cat = cat-file -p
 ps = push
 pl = pull
