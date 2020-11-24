@@ -13,4 +13,5 @@
 [include]
     path=~/.gituser
     path=~/.gitaliases
-    path=~/.gitaliases_custom
+    # this helps to override something for particular environment
+    path=~/.gitconfig_custom
