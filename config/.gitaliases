@@ -8,6 +8,10 @@ aliases = "config --get-regexp alias"
 it = "!git init && git commit -m 'root' --allow-empty"
 
 # global user settings may diffes from settings for newly created repository, so ask basic settings explicitly
+# another option:
+# 1. git it
+# 2. fix the username\email
+# 3. git it
 itc = "!git init && echo "Enter user name:" && read username && git config user.name "$username" && echo "Enter email:" && read email && git config user.email "$email" && git commit -m 'root' --allow-empty"
 
 # init nested git repository
