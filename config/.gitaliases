@@ -37,7 +37,6 @@ ra = rebase --abort
 rs = rebase --skip
 mc = merge --no-ff
 cp = cherry-pick
-qf = "!git-quickfix"
 
 # stash
 staash = "stash --include-untracked"
