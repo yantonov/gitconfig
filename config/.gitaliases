@@ -18,21 +18,21 @@ itc = "!git init && echo "Enter user name:" && read username && git config user.
 git = "!f() { cd "$GIT_PREFIX" && git init && git commit -m 'root' --allow-empty; }; f"
 
 # common
-co = checkout
-br = branch -vv
-st = status --long
-cm = commit -m
-ca = commit --amend
-cat = cat-file -p
-ps = push
-pl = pull
-pr = pull --rebase
-unstage = reset HEAD --
-rc = rebase --continue
-ra = rebase --abort
-rs = rebase --skip
-mc = merge --no-ff
-cp = cherry-pick
+co = "checkout"
+br = "branch -vv"
+st = "status --long"
+cm = "commit -m"
+ca = "commit --amend"
+cat = "cat-file -p"
+ps = "push"
+pl = "pull"
+pr = "pull --rebase"
+unstage = "reset HEAD --"
+rc = "rebase --continue"
+ra = "rebase --abort"
+rs = "rebase --skip"
+mc = "merge --no-ff"
+cp = "cherry-pick"
 
 # stash
 staash = "stash --include-untracked"
@@ -57,11 +57,11 @@ lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
 # commits with dates
 ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
 # commits with short dates
-lds = "!git ldt --date=short"
+lds = "ldt --date=short"
 # commits with relative dates
-ldr = "!git ldt --date=relative"
+ldr = "ldt --date=relative"
 # commits with date and times
-ldi = "!git ldt --date=iso"
+ldi = "ldt --date=iso"
 # graph representation
 lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset'
 # default look for short git log
@@ -70,7 +70,7 @@ ldef = log --oneline --decorate
 filelog = log -u
 fl = log -u
 # last commit
-lc = "!git ll -1"
+lc = "ll -1"
 
 # DIFF
 # Show a diff last commit:
