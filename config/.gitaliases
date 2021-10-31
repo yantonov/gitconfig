@@ -21,7 +21,6 @@ git = "!f() { cd "$GIT_PREFIX" && git init && git commit -m 'root' --allow-empty
 co = checkout
 br = branch -vv
 st = status --long
-c = commit
 cm = commit -m
 ca = commit --amend
 cat = cat-file -p
