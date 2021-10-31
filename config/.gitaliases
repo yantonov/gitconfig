@@ -114,11 +114,6 @@ root = "!git top"
 # force
 please = "push --force-with-lease"
 
-# TAGS
-# show the last tag
-lasttag = describe --tags --abbrev=0
-lt      = describe --tags --abbrev=0
-
 # settings
 # typical usage check current credential to make sure you sure correct information between personal and working projects
 whoami = "!f() { git config user.name; git config user.email; }; f"
