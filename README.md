@@ -1,13 +1,15 @@
 #### personal git config
 
 [git](http://git-scm.com) allow you to save configuration settings in multiple files (since Git 1.7.10+)  
-to use .gitaliases create 'include' section in git config file and add file like this
+You can put your aliases [^aliases] into the separate file and create 'include' section in the config file:
 
 ```bash
 [include]
     path=~/.gitaliases
 ```
 
-and put .gitalises file to ${HOME} directory (or create symlink to it).
+Also, you can keep your aliases under version control and create a symbolic link to the corresponding file.  
+Symlink creation for configuration files can be simplified by using dot[^dot] tool.
 
-p.s. Symlink creation for configuration files can be simplified by using [dot](https://github.com/yantonov/dot) tool.
+[^aliases]: Aliases [documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)  
+[^dot]:[Dot](https://github.com/yantonov/dot) tool
