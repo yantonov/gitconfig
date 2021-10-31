@@ -44,8 +44,8 @@ cb = "rev-parse --abbrev-ref HEAD"
 chash = "rev-parse HEAD"
 
 # kill deleted remote branches
-purge-branch = "fetch --prune"
-clean-branches = "remote prune"
+purge-br = "fetch --prune"
+clean-br = "remote prune"
 
 # LOG
 # simple one line log
