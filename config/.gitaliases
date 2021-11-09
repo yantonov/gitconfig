@@ -45,6 +45,7 @@ chash = "rev-parse HEAD"
 
 # kill deleted remote branches
 purge-br = "fetch --prune"
+# kill outdated local branches without fetching new ones
 clean-br = "remote prune"
 
 # LOG
