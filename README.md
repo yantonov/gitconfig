@@ -9,7 +9,12 @@ You can put your aliases [^aliases] into the separate file and create 'include' 
 ```
 
 Using include section also you can define settings for different (personal/work) environments.  
-See the example [here](https://github.com/yantonov/gitconfig/blob/master/example/.gitaliases_custom).
+See the example [here](https://github.com/yantonov/gitconfig/blob/master/example/.gitaliases_custom).  
+Also using this trivial alias you can check your current username/email settings.
+```bash
+    whoami = "!f() { git config user.name; git config user.email; }; f"
+```
+Check other alises [here](https://github.com/yantonov/gitconfig/blob/master/config/.gitaliases)
 
 Also, you can keep your aliases under version control and create a symbolic link to the corresponding file.  
 Symlink creation for configuration files can be simplified by using dot[^dot] tool.
