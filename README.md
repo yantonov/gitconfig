@@ -8,6 +8,9 @@ You can put your aliases [^aliases] into the separate file and create 'include' 
     path=~/.gitaliases
 ```
 
+Using include section also you can define settings for different (personal/work) environments.  
+See the example [here](https://github.com/yantonov/gitconfig/blob/master/example/.gitaliases_custom).
+
 Also, you can keep your aliases under version control and create a symbolic link to the corresponding file.  
 Symlink creation for configuration files can be simplified by using dot[^dot] tool.
 
