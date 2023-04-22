@@ -2,14 +2,6 @@
 # list of aliases
 aliases = "config --get-regexp alias"
 
-# init git repository
-
-# first commit can not be moved so you need to create empty commit as initial
-it = "!git init && git commit -m 'root' --allow-empty"
-
-# init nested git repository
-git = "!f() { cd "$GIT_PREFIX" && git init && git commit -m 'root' --allow-empty; }; f"
-
 # common
 co = "checkout"
 br = "branch -vv"
