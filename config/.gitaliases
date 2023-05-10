@@ -79,7 +79,7 @@ f = "!git ls-files | grep -i"
 # something like hg rollback
 rollback = "reset --soft HEAD~"
 # remove already committed trash
-fuck = "reset --hard HEAD^"
+drop = "reset --hard HEAD^"
 
 # reset working directory
 clear = "reset --hard"
