@@ -3,6 +3,7 @@
     editor = emacs
     pager = delta
     autocrlf = input
+    symlinks = true
 
 [delta]
     line-numbers = true
