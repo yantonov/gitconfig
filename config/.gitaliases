@@ -58,7 +58,7 @@ fl = log -u
 lc = log -n 1
 
 # last commit long view
-llc = log --pretty=format:'%C(red)Commit: %h (%H)%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ad%Creset\n%Cred\n\t%s' -n 1
+llc = log --pretty=format:'%C(red)Commit: %h (%H)%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
 
 # DIFF
 # Show a diff last commit:
