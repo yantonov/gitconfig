@@ -35,13 +35,13 @@ clean-br = "remote prune"
 
 # LOG
 # simple one line log
-ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
+ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 # changed files
-ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --decorate --numstat
+ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --decorate --numstat -n 10
 # no colors
-lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"  -n 10
 # commits with dates
-ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
+ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 # commits with short dates
 lds = "ldt --date=short"
 # commits with relative dates
@@ -49,9 +49,9 @@ ldr = "ldt --date=relative"
 # commits with date and times
 ldi = "ldt --date=iso"
 # graph representation
-lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset'
+lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset' -n 10
 # default look for short git log
-ldef = log --oneline --decorate
+ldef = log --oneline --decorate -n 10
 # commits related to a file
 filelog = log -u
 fl = log -u
