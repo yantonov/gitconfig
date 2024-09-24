@@ -36,20 +36,16 @@ clean-br = "remote prune"
 # LOG
 # simple one line log
 ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
-# changed files
-ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --decorate --numstat -n 10
-# commits with dates
-ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
-# commits with short dates
-lds = "ldt --date=short"
+
+# one line log with dates
+ll = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
+
 # commits with relative dates
-ldr = "ldt --date=relative"
-# commits with date and times
-ldi = "ldt --date=iso"
+lr = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai (%ar)%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
+
 # graph representation
 lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset' -n 10
-# default look for short git log
-ldef = log --oneline --decorate -n 10
+
 # commits related to a file
 filelog = log -u
 fl = log -u
@@ -58,7 +54,7 @@ fl = log -u
 lc = log -n 1
 
 # last commit long view
-llc = log --pretty=format:'%C(red)Commit: %h (%H)%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
+llc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
 
 # DIFF
 # Show a diff last commit:
