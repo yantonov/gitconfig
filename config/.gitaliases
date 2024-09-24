@@ -54,7 +54,7 @@ ldef = log --oneline --decorate -n 10
 filelog = log -u
 fl = log -u
 # last commit
-lc = "ll -1"
+lc = "log -n 1 -p"
 
 # DIFF
 # Show a diff last commit:
