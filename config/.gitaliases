@@ -53,8 +53,12 @@ ldef = log --oneline --decorate -n 10
 # commits related to a file
 filelog = log -u
 fl = log -u
-# last commit
-lc = "log -n 1"
+
+# last commit default view
+lc = log -n 1
+
+# last commit long view
+llc = log --pretty=format:'%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ad%Creset\n%CredHash: %h (%H)%Creset\n\n\t%s' -n 1
 
 # DIFF
 # Show a diff last commit:
