@@ -50,11 +50,8 @@ lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg
 filelog = log -u
 fl = log -u
 
-# last commit default view
-lc = log -n 1
-
 # last commit long view
-llc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
+lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
 
 # DIFF
 # Show a diff last commit:
