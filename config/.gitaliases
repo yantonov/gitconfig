@@ -38,8 +38,6 @@ clean-br = "remote prune"
 ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 # changed files
 ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --decorate --numstat -n 10
-# no colors
-lnc = log --pretty=format:"%h\\ %s\\ [%cn]"  -n 10
 # commits with dates
 ldt = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 # commits with short dates
