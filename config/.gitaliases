@@ -40,8 +40,11 @@ ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%
 # one line log with dates
 ll = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 
-# commits with relative dates
+# one line log with relative dates
 lr = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai (%ar)%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
+
+# last commit long view
+lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
 
 # graph representation
 lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset' -n 10
@@ -49,9 +52,6 @@ lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg
 # commits related to a file
 filelog = log -u
 fl = log -u
-
-# last commit long view
-lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
 
 # DIFF
 # Show a diff last commit:
