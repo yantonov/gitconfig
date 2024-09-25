@@ -43,8 +43,11 @@ ll = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai%Creset -%C(yellow)%d%C
 # one line log with relative dates
 lr = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai (%ar)%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 
-# last commit long view
+# last commit
 lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
+
+# parent commit
+lp = lc HEAD^
 
 # graph representation
 lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset' -n 10
