@@ -10,15 +10,12 @@
 
 ## Split config
 [git](http://git-scm.com) allow you to save configuration settings in multiple files (since Git 1.7.10+)  
-You can put your aliases [^aliases] into the separate file and create 'include' section in the config file:
+You can put your aliases [^aliases] (all or some of them) into a separate file and create 'include' section in the config file.
 
 ```bash
 [include]
     path=~/.gitaliases
 ```
-
-Using include section also you can define settings for different (personal/work) environments.  
-See the example [here](https://github.com/yantonov/gitconfig/blob/master/examples/.gitaliases_custom).  
 
 ## Current user
 In case of multiple environments work\personal\whatever it is nice to be able to figure out what is the current user and switch if needed.  
