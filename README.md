@@ -21,10 +21,13 @@ Using include section also you can define settings for different (personal/work)
 See the example [here](https://github.com/yantonov/gitconfig/blob/master/examples/.gitaliases_custom).  
 
 ## Current user
-Also using this trivial alias you can check your current username/email settings.
+In case of multiple environments work\personal\whatever it is nice to be able to figure out what is the current user and switch if needed.  
+
+Using this trivial alias you can check your current username/email settings.
 ```bash
     whoami = "!f() { git config user.name; git config user.email; }; f"
 ```
+To set specific environment you can take a look at these [examples](https://github.com/yantonov/gitconfig/blob/master/examples/.gitaliases_custom).
 
 ## Other aliases
 Check other aliases [here](https://github.com/yantonov/gitconfig/blob/master/config/.gitaliases)
