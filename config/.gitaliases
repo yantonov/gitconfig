@@ -44,7 +44,7 @@ ll = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai%Creset -%C(yellow)%d%C
 lr = log --all --pretty=format:'%Cred%h%Creset %Cgreen%ai (%ar)%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 
 # last commit
-lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n\t%s' -n 1
+lc = log --pretty=format:'%C(red)Commit: %h <%H>%d%Creset\n%C(bold blue)Author: %an <%ae>%Creset\n%CgreenDate: %ai (%ar)%Creset\n%Cred\n%B' -n 1
 
 # parent commit
 lp = lc HEAD^
