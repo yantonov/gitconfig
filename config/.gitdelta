@@ -1,0 +1,8 @@
+[core]
+    pager = delta
+
+[delta]
+    line-numbers = true
+
+[interactive]
+    diffFilter = delta --color-only
