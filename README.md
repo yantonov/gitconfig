@@ -22,7 +22,7 @@ In case of multiple environments work\personal\whatever it is nice to be able to
 
 Using this trivial alias you can check your current username/email settings.
 ```bash
-    whoami = "!f() { git config user.name; git config user.email; }; f"
+    whoami = "!f() { echo \"$(git config user.name) <$(git config user.email)>\"; }; f"
 ```
 To set specific environment you can take a look at these [examples](https://github.com/yantonov/gitconfig/blob/master/examples/.gitaliases_custom).
 

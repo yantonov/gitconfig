@@ -95,4 +95,4 @@ please = "push --force-with-lease"
 
 # settings
 # typical usage check current credential to make sure you sure correct information between personal and working projects
-whoami = "!f() { git config user.name; git config user.email; }; f"
+whoami = "!f() { echo \"$(git config user.name) <$(git config user.email)>\"; }; f"
