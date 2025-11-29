@@ -88,7 +88,7 @@ show-purge = "clean -d -n"
 
 # REPOSITORY ROOT
 top = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo $TOPLEVEL; }; f"
-root = "!git top"
+root = "top"
 
 # force
 please = "push --force-with-lease"
