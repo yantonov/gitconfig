@@ -29,8 +29,8 @@ To set specific environment you can take a look at these [examples](https://gith
 ## Other aliases
 Check other aliases [here](https://github.com/yantonov/gitconfig/blob/master/config/.gitaliases)
 
-## About bootstrap
-Also, you can keep your aliases under version control and create a symbolic link to the corresponding file.  
+## Bootstrap
+You can keep your aliases under version control and create a symbolic link to the corresponding file.  
 Symlink creation for configuration files can be simplified by using dot[^dot] tool.
 
 ## SSH config
