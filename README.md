@@ -42,7 +42,12 @@ Example for ssh config is [here](https://github.com/yantonov/gitconfig/blob/mast
 Nice command to find source of override, for example for 'co'
 ```sh
     git config --show-origin --get-all alias.co
-```    
+```
+
+To see alias effective value, example for 'co'
+```sh
+    git config --get alias.co
+```
 
 ## Side notes
 
