@@ -6,7 +6,8 @@
 3. [Other aliases](#other-aliases)
 4. [Bootstrap](#bootstrap)
 5. [SSH config](#ssh-config)
-6. [Side notes](#side-notes)
+6. [Debug][#debug]
+7. [Side notes](#side-notes)
 
 ## Split config
 [git](http://git-scm.com) allow you to save configuration settings in multiple files (since Git 1.7.10+)  
@@ -36,6 +37,12 @@ Symlink creation for configuration files can be simplified by using dot[^dot] to
 ## SSH config
 
 Example for ssh config is [here](https://github.com/yantonov/gitconfig/blob/master/examples/ssh/config).
+
+## Debug
+Nice command to find source of override, for example for 'co'
+```sh
+    git config --show-origin --get-all alias.co
+```    
 
 ## Side notes
 
