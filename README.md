@@ -6,7 +6,7 @@
 3. [Other aliases](#other-aliases)
 4. [Bootstrap](#bootstrap)
 5. [SSH config](#ssh-config)
-6. [Debug][#debug]
+6. [Debug](#debug)
 7. [Side notes](#side-notes)
 
 ## Split config
