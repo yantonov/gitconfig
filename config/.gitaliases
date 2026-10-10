@@ -2,13 +2,17 @@
 # list of aliases
 aliases = "config --get-regexp alias"
 
-# common
+
+# -----------
+# COMMON
+# -----------
 co = "checkout"
 br = "branch -vv"
 st = "status --long"
 cm = "commit -m"
 ca = "commit --amend"
 ps = "push"
+please = "push --force-with-lease"
 pl = "pull"
 pr = "pull --rebase"
 unstage = "reset HEAD --"
@@ -28,10 +32,14 @@ chash = "rev-parse HEAD"
 
 # kill deleted remote branches
 purge-br = "fetch --prune"
+
 # kill outdated local branches without fetching new ones
 clean-br = "remote prune"
 
+
+# -----------
 # LOG
+# -----------
 # simple one line log
 ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' -n 10
 
@@ -57,22 +65,33 @@ changed="log --oneline --name-only -n 1"
 filelog = log -u
 fl = log -u
 
+
+# -----------
 # DIFF
-# Show a diff last commit:
+# -----------
 df  = "diff --color HEAD"
 dfc = "diff --color --cached HEAD"
 
+
+# -----------
 # GREP/SEARCH
+# -----------
 # Search/grep your entire codebase for a string:
 gr = grep -Ii
+
 # Grep from root folder:
 gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name --color -In $1 && cd $A; }; f"
+
 # Find a file path in codebase:
 f = "!git ls-files | grep -i"
 
+
+# -----------
 # FIX
+# -----------
 # something like hg rollback
 rollback = "reset --soft HEAD~"
+
 # remove already committed trash
 drop = "reset --hard HEAD^"
 
@@ -83,13 +102,16 @@ clear = "reset --hard"
 purge = "clean -d -i"
 show-purge = "clean -d -n"
 
+
+# -----------
 # REPOSITORY ROOT
+# -----------
 top = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo $TOPLEVEL; }; f"
 root = "top"
 
-# force
-please = "push --force-with-lease"
 
-# settings
+# -----------
+# SETTINGS
+# -----------
 # typical usage check current credential to make sure you sure correct information between personal and working projects
 whoami = "!f() { echo \"$(git config user.name) <$(git config user.email)>\"; }; f"
