@@ -50,6 +50,9 @@ lp = lc HEAD^
 # graph representation
 lgraph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci)%Creset %C(bold blue)<%an>%Creset' -n 10
 
+# show changed files
+changed="log --oneline --name-only -n 1"
+
 # commits related to a file
 filelog = log -u
 fl = log -u
