@@ -61,8 +61,6 @@ fl = log -u
 # Show a diff last commit:
 df  = "diff --color HEAD"
 dfc = "diff --color --cached HEAD"
-# Show content (full diff) of a commit given a revision:
-dfr = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
 
 # GREP/SEARCH
 # Search/grep your entire codebase for a string:
