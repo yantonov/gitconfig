@@ -14,7 +14,6 @@ pr = "pull --rebase"
 unstage = "reset HEAD --"
 rc = "rebase --continue"
 ra = "rebase --abort"
-rs = "rebase --skip"
 mc = "merge --no-ff"
 cp = "cherry-pick"
 
