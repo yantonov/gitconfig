@@ -60,8 +60,6 @@ df  = "diff --color HEAD"
 dfc = "diff --color --cached HEAD"
 # Show content (full diff) of a commit given a revision:
 dfr = "!f() { if [ -z "$1" ]; then echo 'revision is not defined'; echo 'usage git dr <revision>'; else git diff "$1"^.."$1"; fi }; f"
-# show list of changed files, example: git changed HEAD~
-changed = "diff --name-only"
 
 # GREP/SEARCH
 # Search/grep your entire codebase for a string:
