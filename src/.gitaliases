@@ -8,9 +8,10 @@ aliases = "config --get-regexp alias"
 # -----------
 co = "checkout"
 br = "branch -vv"
-st = "status --long"
+st = "status -s"
 cm = "commit -m"
-ca = "commit --amend"
+ca = "commit --amend --reuse-message=HEAD"
+cam = "commit --amend"
 ps = "push"
 please = "push --force-with-lease"
 pl = "pull"
@@ -20,6 +21,9 @@ rc = "rebase --continue"
 ra = "rebase --abort"
 mc = "merge --no-ff"
 cp = "cherry-pick"
+
+# Switch to a branch, creating it if necessary
+go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
 # stash
 staash = "stash --include-untracked"
