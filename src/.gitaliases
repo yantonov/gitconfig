@@ -34,10 +34,6 @@ cb = "rev-parse --abbrev-ref HEAD"
 # current commit hash
 chash = "rev-parse HEAD"
 
-# delete local branches whose upstream is gone on the remote
-# uses for-each-ref to avoid parsing `branch -vv` column output
-clean-br = "!git for-each-ref --format='%(refname:short)|%(upstream:track)' refs/heads | awk -F'|' '$2 ~ /gone/ {print $1}' | xargs -r git branch -d"
-
 
 # -----------
 # LOG
