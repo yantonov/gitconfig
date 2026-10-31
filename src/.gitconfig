@@ -13,6 +13,10 @@
     # first push of a new branch sets its upstream, no -u needed
     autoSetupRemote = true
 
+[user]
+    # fail instead of guessing an identity from username and hostname
+    useConfigOnly = true
+
 [include]
     # https://docs.github.com/articles/setting-your-email-in-git
     path=~/.gituser
