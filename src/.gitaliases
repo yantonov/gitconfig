@@ -80,7 +80,7 @@ gr = grep -Ii
 gra = "!git -C \"$(git rev-parse --show-toplevel)\" grep --full-name --color=auto -Iin"
 
 # Find a file path in codebase:
-f = "!git ls-files | grep -i"
+f = "!git ls-files -- \":(icase)*$1*\""
 
 
 # -----------
