@@ -82,7 +82,7 @@ dfc = "diff --color --cached HEAD"
 gr = grep -Ii
 
 # Grep from root folder:
-gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name --color -In $1 && cd $A; }; f"
+gra = "!git -C \"$(git rev-parse --show-toplevel)\" grep --full-name --color=auto -Iin"
 
 # Find a file path in codebase:
 f = "!git ls-files | grep -i"
