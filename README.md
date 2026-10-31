@@ -2,12 +2,13 @@
 
 ## Table of Contents
 1. [Split config](#split-config)
-2. [Current user](#current-user)
-3. [Other aliases](#other-aliases)
-4. [Bootstrap](#bootstrap)
-5. [SSH config](#ssh-config)
-6. [Debug](#debug)
-7. [Side notes](#side-notes)
+2. [Settings](#settings)
+3. [Current user](#current-user)
+4. [Other aliases](#other-aliases)
+5. [Bootstrap](#bootstrap)
+6. [SSH config](#ssh-config)
+7. [Debug](#debug)
+8. [Side notes](#side-notes)
 
 ## Split config
 [git](http://git-scm.com) allow you to save configuration settings in multiple files (since Git 1.7.10+)  
@@ -18,17 +19,39 @@ You can put your aliases [^aliases] (all or some of them) into a separate file a
     path=~/.gitaliases
 ```
 
+## Settings
+Besides aliases the config carries a few behaviour switches (`src/.gitconfig`):
+
+```bash
+[fetch]
+    # remote-tracking refs and tags for deleted branches go away on every fetch
+    prune = true
+    pruneTags = true
+
+[push]
+    # first push of a new branch sets its upstream, no -u needed
+    autoSetupRemote = true
+
+[user]
+    # fail instead of guessing an identity from username and hostname
+    useConfigOnly = true
+```
+
 ## Current user
 In case of multiple environments work\personal\whatever it is nice to be able to figure out what is the current user and switch if needed.  
+
+The identity itself lives in its own file, `~/.gituser`, included from the main config, so it can be overridden per environment.
 
 Using this trivial alias you can check your current username/email settings.
 ```bash
     whoami = "!f() { echo \"$(git config user.name) <$(git config user.email)>\"; }; f"
 ```
+Because `user.useConfigOnly` is set, a missing identity is an error instead of a name guessed from the username and hostname.
+
 To set specific environment you can take a look at these [examples](https://github.com/yantonov/gitconfig/blob/master/examples/.gitaliases_custom).
 
 ## Other aliases
-Check other aliases [here](https://github.com/yantonov/gitconfig/blob/master/config/.gitaliases)
+Check other aliases [here](https://github.com/yantonov/gitconfig/blob/master/src/.gitaliases)
 
 ## Bootstrap
 You can keep your aliases under version control and create a symbolic link to the corresponding file.  
