@@ -9,6 +9,10 @@
     prune = true
     pruneTags = true
 
+[push]
+    # first push of a new branch sets its upstream, no -u needed
+    autoSetupRemote = true
+
 [include]
     # https://docs.github.com/articles/setting-your-email-in-git
     path=~/.gituser
