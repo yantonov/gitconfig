@@ -104,8 +104,8 @@ show-purge = "clean -d -n"
 # -----------
 # REPOSITORY ROOT
 # -----------
-top = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo $TOPLEVEL; }; f"
-root = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo $TOPLEVEL; }; f"
+top = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo \"$TOPLEVEL\"; }; f"
+root = "!f() { TOPLEVEL=$(git rev-parse --show-toplevel) && echo \"$TOPLEVEL\"; }; f"
 
 
 # -----------
