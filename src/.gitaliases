@@ -73,10 +73,10 @@ dfc = "diff --color --cached HEAD"
 # -----------
 # GREP/SEARCH
 # -----------
-# Search/grep your entire codebase for a string:
+# search the current directory: case-insensitive, skips binaries
 gr = grep -Ii
 
-# Grep from root folder:
+# search the whole repository: paths from the root, with line numbers
 gra = "!git -C \"$(git rev-parse --show-toplevel)\" grep --full-name --color=auto -Iin"
 
 # Find a file path in codebase:
